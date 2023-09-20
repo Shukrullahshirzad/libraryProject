@@ -1,0 +1,232 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+}
+/* End of CSS reset */
+body{
+    background: rgb(136, 138, 105);
+}
+body> h1{
+    font-size: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+}
+body>p{
+    text-align: center;
+}
+.container{
+    min-height: 80vh;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-auto-rows: auto;
+    gap: 2rem;
+    place-content: center;
+    padding: 2rem;
+}
+.createBook{
+    border: 5px solid rgba(152, 109, 109, 0.555);
+    margin: 1rem;
+    display: grid;
+    place-content: center;
+    height: 80%;
+    font-size: 9rem;
+    color: rgb(156, 139, 139);
+    transition-duration: 0.3s;
+}
+.addBtn:hover{
+    transform: scale(1.1);
+}
+.add-book h1{
+    margin: 1rem auto 0 ;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgb(146, 150, 139);
+    padding: 0 0 1rem 0;
+    position: relative;
+    transition-duration: 0.3s;
+    background-color: rgba(22, 16, 8, 0.326);
+}
+.card img{
+    display: block;
+    
+}
+.card p{
+    margin: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    color: rgba(46, 38, 38, 0.813);
+}
+.book .title{
+    margin:0.5rem 1.5rem;
+    font-size: 1rem;
+}
+.btn{
+    width: 80%;
+    padding: 0.5rem 1rem;
+    margin: 0 1.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    background-color: darkred;
+}
+.cardImg{
+    background-color: rgba(250, 235, 215, 0.263);
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+}
+.book-form{
+    min-width: 250px;
+    padding: 1rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.book-form *{
+    display: block;
+}
+.book-form input{
+    width: 100%;
+    margin:0.2rem 0 1rem;
+}
+.hide{
+    display: none;
+}
