@@ -205,8 +205,14 @@ body>p{
     outline: none;
     transition-duration: 0.3s;
 }
-.btn:hover{
+.btn.removeBook:hover{
     background-color: darkred;
+}
+.readBook{
+    margin-top: 10px;
+}
+.btn.readBook:hover{
+    background-color: aquamarine;
 }
 .cardImg{
     background-color: rgba(250, 235, 215, 0.263);
