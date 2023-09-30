@@ -1,10 +1,11 @@
 // rename the functions 
 
 let books = [];
-function Book(title, author, pages, index){
+function Book(title, author, pages){
   this.title = title;
   this.author = author;
   this.pages = pages;
+  this.readBook = false;
 }
 
 let addBookBtn = document.querySelector(".addBook");
