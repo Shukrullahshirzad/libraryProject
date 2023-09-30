@@ -58,10 +58,15 @@ function showBook(){
   let pagesPara = document.createElement('p');
   pagesPara.textContent =  books[books.length-1].pages + " pages";
 
-  // button
+  // Remove button
   let btn = document.createElement('button');
   btn.textContent = "Remove Book";
   btn.classList.add('btn', 'removeBook');
+
+  // Read button
+  let ReadBtn = document.createElement('button');
+  ReadBtn.textContent = "Read Book";
+  ReadBtn.classList.add('btn', 'readBook');
 
   // book div
   let book = document.createElement("div");
@@ -70,6 +75,8 @@ function showBook(){
   book.appendChild(authorPara);
   book.appendChild(pagesPara);
   book.appendChild(btn);
+  book.appendChild(ReadBtn);
+  
   book.classList.add('card', 'book');
 
   // add the book div to the container
