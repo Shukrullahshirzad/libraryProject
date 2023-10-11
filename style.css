@@ -135,13 +135,17 @@ table {
 body{
     background: rgb(136, 138, 105);
 }
-body> h1{
+header{
+    background-color: rgb(88, 90, 64);
+    padding: 1rem;
+    position: relative;
+}
+header> h1{
     font-size: 5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    margin-top: 2rem;
 }
-body>p{
+header>p{
     text-align: center;
 }
 .container{
@@ -154,15 +158,44 @@ body>p{
     gap: 2rem;
     place-content: center;
     padding: 2rem;
+    position: relative;
+}
+.formWrapper{
+    background-color: rgba(204, 176, 20, 0.645);
+    position: absolute;
+    top: 128px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.active{
+    display: flex;
+    z-index: 100;
+}
+form{
+    width: 250px;
+
+}
+.new-book{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition-duration: 0.3ms;
+    background-color: rgb(56, 57, 45);
+    font-size: 1.2rem;
 }
 
-.add-book:hover{
-    transform: scale(1.1);
-}
-.add-book h1{
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
+.new-book:hover{
+    transform: scale(1.05);
 
 }
 .new-book-form{

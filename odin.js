@@ -7,10 +7,12 @@ function Book(title, author, pages, readBook) {
   this.pages = pages;
   this.readBook = readBook;
 }
+let formWrapper = document.querySelector('.formWrapper');
 function showBookForm(){
     let showBookForm = document.querySelector('.new-book-form');
+    formWrapper.classList.add('active');
+    formWrapper.classList.remove('hide');
     showBookForm.classList.remove('hide');
-    showBookFrombtn.classList.add('hide')
 }
 function getBookInfo(){
   let title = document.querySelector("#book-title");
@@ -80,6 +82,9 @@ function renderBook(){
   // add the book div to the container
   let container = document.querySelector('.container');
   container.appendChild(book);
+  formWrapper.classList.remove('active');
+  formWrapper.classList.add('hide');
+
 }
 
 function addBookToLibrary(e) {
@@ -104,6 +109,7 @@ function addBookToLibrary(e) {
 
 function createBook(e){
   addBookToLibrary(e);
+
 }
 // delete a book or change reading status of the book
 
@@ -145,7 +151,7 @@ function removeBook(e){
 let container = document.querySelector('.container');
 container.addEventListener('click', removeBook);
 // show new book form
-let showBookFrombtn = document.querySelector('.add-book');
+let showBookFrombtn = document.querySelector('.new-book');
 showBookFrombtn.addEventListener('click', showBookForm);
 
 // Add book to the library and render on DOM
