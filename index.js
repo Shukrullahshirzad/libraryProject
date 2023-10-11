@@ -67,7 +67,7 @@ function showBook(){
   // Read button
   let ReadBtn = document.createElement('button');
   ReadBtn.textContent = "Read Book";
-  ReadBtn.classList.add('btn', 'readBook');
+  ReadBtn.classList.add('btn', 'notRead');
 
   // book div
   let book = document.createElement("div");
@@ -98,12 +98,31 @@ function removeBook(e){
   buttons.forEach(button=>{ 
     if(e.target == button){
       let elTitle = e.target.parentElement.firstElementChild.nextSibling.textContent;
-      let removeEl = books.findIndex(el => el.title === elTitle);
-      books.splice(removeEl, 1);
+      let removeElIndex = books.findIndex(el => el.title === elTitle);
+      books.splice(removeElIndex, 1);
       e.target.parentElement.remove();
       hideMessage();
     }
   })
   
 }
-container.addEventListener('click', removeBook)
+container.addEventListener('click', removeBook);
+
+function readBook(e){
+  let readButton = document.querySelector('.btn.readBook');
+  if(e.target == readButton){
+    let elTitle = e.target.parentElement.firstElementChild.nextSibling.textContent;
+    let elIndex = books.findIndex(el => el.title === elTitle);
+    if(!books[elIndex].readBook){
+      books[elIndex].readBook = true;
+      readButton.textContent = "Not Read";
+      e.target.parentElement.classList.toggle('.notRead');
+    }
+    else{
+      books[elIndex].readBook = false;
+      e.target.parentElement.classList.toggle('.notRead')
+    }
+    
+  }
+}
+container.addEventListener('click', readBook);
